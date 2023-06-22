@@ -132,6 +132,20 @@ public class B2BstepDefinition extends Instance {
         _page.userClicksTheSaveButton();
     }
 
+    //    Footer
 
+    @Then("user clicks the AGB")
+    public void userClicksTheAGB() throws IOException {
+        _page.userClicksTheAGB();
+    }
 
+    @Then("user clicks the Impressum")
+    public void userClicksTheImpressum() throws IOException {
+        _page.userClicksTheImpressum();
+    }
+
+    @Then("user clicks the Datenschutz")
+    public void userClicksTheDatenschutz() throws IOException {
+        _page.userClicksTheDatenschutz();
+    }
 }

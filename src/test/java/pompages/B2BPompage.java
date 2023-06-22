@@ -38,6 +38,10 @@ public class B2BPompage {
         @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[2]/div[2]/button[2]") public WebElement _AddCompanyBtn;
     @FindBy(xpath = "(//div[contains(.,'Deutsch')])[9]") public WebElement _LanguageSelectorDE;
     @FindBy(xpath = "(//div[contains(.,'English')])[10]") public WebElement _LanguageSelectorEN;
+    //Footer
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[1]/b2b-ui-text") public WebElement _AGB;
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[2]/b2b-ui-text") public WebElement _Impressum;
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[3]/b2b-ui-text") public WebElement _Datenschutz;
     //Dashboard
     @FindBy(xpath = "//*[@id=\"host-content\"]/b2b-mfe-dashboard/app-dashboard/div/div[1]/b2b-ui-text") public WebElement _MyApps;
     @FindBy(xpath = "(//div[contains(.,'Meine Apps')])[5]") public WebElement _MyAppsDE;
@@ -61,6 +65,8 @@ public class B2BPompage {
     @FindBy(xpath = "//input[@formcontrolname='firstname']") public WebElement _VornameField;
     @FindBy(xpath = "//input[@formcontrolname='lastname']") public WebElement _NachnameField;
     @FindBy(xpath = "//input[@formcontrolname='tel']") public WebElement _TelefonField;
+    //Footer
+
 
 
 
@@ -207,6 +213,19 @@ public class B2BPompage {
         h.pause(3);
     }
 
+    //Footer
+    public void userClicksTheAGB() throws IOException {
+        h.xwaitForElementVisibility(_AGB, driver, "click", "click AGB Link", _testLogs).click();
+        h.pause(2);
+    }
 
+    public void userClicksTheImpressum() throws IOException {
+        h.xwaitForElementVisibility(_Impressum, driver, "click", "click Impressum Link", _testLogs).click();
+        h.pause(2);
+    }
 
+    public void userClicksTheDatenschutz() throws IOException {
+        h.xwaitForElementVisibility(_Datenschutz, driver, "click", "click Datenschutz Link", _testLogs).click();
+        h.pause(2);
+    }
 }

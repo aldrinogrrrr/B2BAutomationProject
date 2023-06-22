@@ -20,7 +20,7 @@ Feature: Company Selector
     Then user sees the dashboard
 
 
-  @RunSolo
+#  @RunSolo
   Scenario: User onboards a company
     Given user goes to B2B site
     And user logs in
