@@ -29,3 +29,14 @@ Feature: Company Selector
     Then user validates the Company Onboarding Modal
     Then user onboards a company
     Then user sees the dashboard
+
+
+  @RunSolo
+  Scenario: User onboards an existing company
+    Given user goes to B2B site
+    And user logs in
+    Then user clicks the Company Selector
+    Then user clicks the Company Onboarding button
+    Then user validates the Company Onboarding Modal
+    Then user onboards a company
+    Then user sees the error message

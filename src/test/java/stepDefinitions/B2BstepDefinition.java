@@ -83,6 +83,11 @@ public class B2BstepDefinition extends Instance {
                 _page.userOnboardsACompany();
             }
 
+            @Then("user sees the error message")
+            public void userSeesTheErrorMessage() throws IOException {
+                _page.userSeesTheErrorMessage();
+            }
+
     @Then("user clicks the language selector")
     public void userClicksTheLanguageSelector() throws IOException {
         _page.userClicksTheLanguageSelector();
@@ -148,4 +153,6 @@ public class B2BstepDefinition extends Instance {
     public void userClicksTheDatenschutz() throws IOException {
         _page.userClicksTheDatenschutz();
     }
+
+
 }
