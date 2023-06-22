@@ -20,7 +20,7 @@ Feature: Third-party applications
     And user logs in
     Then user sees the dashboard
 
-  @RunSolo
+#  @RunSolo
   Scenario: Go to AGB Hyperlink
     Given user goes to B2B site
     And user logs in
