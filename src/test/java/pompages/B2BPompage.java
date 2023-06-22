@@ -27,11 +27,15 @@ public class B2BPompage {
     //Header
     @FindBy(xpath = "//*[@id=\"host-header\"]/b2b-mfe-header/app-header/div/div/div[2]/b2b-ui-svg") public WebElement _ProfileIcon;
     @FindBy(xpath = "//span[contains(@class,'dropdown-lbl')]") public WebElement _CompanySelector;
-    @FindBy(xpath = "//input[contains(@autocomplete,'off')]") public WebElement _CompanySelectorSearch;
-    @FindBy(xpath = "//*[@id=\"mat-menu-panel-0\"]/div/app-dropdown-panel/div/div[2]/ul") public WebElement _CompanyList;
-    @FindBy(xpath = "(//div[contains(.,'Add new customer')])[8]") public WebElement _CompanyOnboardingENbtn;
-    @FindBy(xpath = "(//div[contains(.,'Neuen Kunden hinzufügen')])[8]") public WebElement _CompanyOnboardingDEbtn;
-    @FindBy(xpath = "(//div[contains(.,'CREM')])[13]") public WebElement _CompanySearchResult;
+        @FindBy(xpath = "//input[contains(@autocomplete,'off')]") public WebElement _CompanySelectorSearch;
+        @FindBy(xpath = "//*[@id=\"mat-menu-panel-0\"]/div/app-dropdown-panel/div/div[2]/ul") public WebElement _CompanyList;
+        @FindBy(xpath = "(//div[contains(.,'Add new customer')])[8]") public WebElement _CompanyOnboardingENbtn;
+        @FindBy(xpath = "(//div[contains(.,'Neuen Kunden hinzufügen')])[8]") public WebElement _CompanyOnboardingDEbtn;
+        @FindBy(xpath = "(//div[contains(.,'CREM')])[13]") public WebElement _CompanySearchResult;
+        @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[1]") public WebElement _CompanyOnboardingHeader;
+        @FindBy(xpath = "//textarea[contains(@name,'company-name')]") public WebElement _OnboardingTextField;
+        @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[2]/div[2]/button[1]") public WebElement _CancelBtn;
+        @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[2]/div[2]/button[2]") public WebElement _AddCompanyBtn;
     @FindBy(xpath = "(//div[contains(.,'Deutsch')])[9]") public WebElement _LanguageSelectorDE;
     @FindBy(xpath = "(//div[contains(.,'English')])[10]") public WebElement _LanguageSelectorEN;
     //Dashboard
@@ -104,6 +108,24 @@ public class B2BPompage {
 
             public void userClicksTheResult() throws IOException {
                 h.xwaitForElementVisibility(_CompanySearchResult, driver, "click", "click the company name", _testLogs).click();
+                h.pause(2);
+            }
+
+            public void userClicksTheCompanyOnboardingButton() throws IOException {
+                h.xwaitForElementVisibility(_CompanyOnboardingDEbtn, driver, "click", "click Company Onboarding Button", _testLogs).click();
+                h.pause(2);
+            }
+
+            public void userValidatesTheCompanyOnboardingModal() throws IOException {
+                h.xwaitForElementVisibility(_CompanyOnboardingHeader, driver, "isDisplayed", "Modal Header is visible", _testLogs);
+                h.xwaitForElementVisibility(_OnboardingTextField, driver, "isDisplayed", "Text Field is visible", _testLogs);
+                h.xwaitForElementVisibility(_CancelBtn, driver, "isDisplayed", "Cancel Button is visible", _testLogs);
+                h.xwaitForElementVisibility(_AddCompanyBtn, driver, "isDisplayed", "Add Button is visible", _testLogs);
+            }
+
+            public void userOnboardsACompany() throws IOException {
+                h.enterEachChar("TestJune22", h.xwaitForElementVisibility(_OnboardingTextField, driver, "enter", "input the company name", _testLogs));
+                h.xwaitForElementVisibility(_AddCompanyBtn, driver, "click", "Add Button is visible", _testLogs).click();
                 h.pause(2);
             }
 
