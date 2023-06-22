@@ -68,6 +68,21 @@ public class B2BstepDefinition extends Instance {
                 _page.userClicksTheResult();
             }
 
+            @Then("user clicks the Company Onboarding button")
+            public void userClicksTheCompanyOnboardingButton() throws IOException {
+                _page.userClicksTheCompanyOnboardingButton();
+            }
+
+            @Then("user validates the Company Onboarding Modal")
+            public void userValidatesTheCompanyOnboardingModal() throws IOException {
+                _page.userValidatesTheCompanyOnboardingModal();
+            }
+
+            @Then("user onboards a company")
+            public void userOnboardsACompany() throws IOException {
+                _page.userOnboardsACompany();
+            }
+
     @Then("user clicks the language selector")
     public void userClicksTheLanguageSelector() throws IOException {
         _page.userClicksTheLanguageSelector();

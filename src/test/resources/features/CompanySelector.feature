@@ -10,7 +10,7 @@ Feature: Company Selector
     Then user validates the Company Selector
 
 
-  @RunSolo
+#  @RunSolo
   Scenario: User searches for a company
     Given user goes to B2B site
     And user logs in
@@ -20,10 +20,12 @@ Feature: Company Selector
     Then user sees the dashboard
 
 
-#  @RunSolo
+  @RunSolo
   Scenario: User onboards a company
     Given user goes to B2B site
     And user logs in
     Then user clicks the Company Selector
     Then user clicks the Company Onboarding button
+    Then user validates the Company Onboarding Modal
     Then user onboards a company
+    Then user sees the dashboard
