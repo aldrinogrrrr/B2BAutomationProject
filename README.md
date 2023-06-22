@@ -1,8 +1,5 @@
 # Introduction 
 Framework for automation testing<br>
-Uploaded in this repository 2/17/2022
-
-Introduction wiki: https://bag-2020prj.visualstudio.com/EnergiePortal/_wiki/wikis/Kommunalportal-2.0.wiki/1873/Automation-Testing-Selenium-Webdriver
 
 # Getting Started
 To run a test in your local machine
