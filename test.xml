@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Test Suite" parallel="classes" data-provider-thread-count="1"  configfailurepolicy="continue" >
+    <test name="Test" junit="true" >
+        <classes>
+            <!-- change the name of the class to your target runner class-->
+
+            <class name="TestRunner"/>
+        </classes>
+    </test>
+
+</suite>
+
