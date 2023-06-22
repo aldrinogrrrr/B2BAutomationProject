@@ -36,6 +36,7 @@ public class B2BPompage {
         @FindBy(xpath = "//textarea[contains(@name,'company-name')]") public WebElement _OnboardingTextField;
         @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[2]/div[2]/button[1]") public WebElement _CancelBtn;
         @FindBy(xpath = "//*[@id=\"Modal\"]/app-new-customer-modal/div/div[2]/div[2]/button[2]") public WebElement _AddCompanyBtn;
+        @FindBy(xpath = "//p[contains(@class,'helper-text error-text')]") public WebElement _CompanyOnboardingErrorMsg;
     @FindBy(xpath = "(//div[contains(.,'Deutsch')])[9]") public WebElement _LanguageSelectorDE;
     @FindBy(xpath = "(//div[contains(.,'English')])[10]") public WebElement _LanguageSelectorEN;
     //Footer
@@ -135,6 +136,10 @@ public class B2BPompage {
                 h.pause(2);
             }
 
+            public void userSeesTheErrorMessage() throws IOException {
+                h.xwaitForElementVisibility(_CompanyOnboardingErrorMsg, driver, "isDisplayed", "Error Message is displayed", _testLogs).isDisplayed();
+            }
+
 
     public void userClicksTheLanguageSelector() throws IOException{
         h.xwaitForElementVisibility(_LanguageSelectorDE, driver, "click", "Click Language Selector", _testLogs).click();
@@ -228,4 +233,6 @@ public class B2BPompage {
         h.xwaitForElementVisibility(_Datenschutz, driver, "click", "click Datenschutz Link", _testLogs).click();
         h.pause(2);
     }
+
+
 }
