@@ -27,3 +27,5 @@ To run specific feature file/s in your local machine
 <li> In your stepdefinition class, create a static webdriver variable then inherit the Instance class</li>
 <li> Create the page object model class (page class) then inherit the stepdefinition class </li>
 </ol>
+
+#This repository is for B2B Testers. Maintained by Fritz Alabastro
