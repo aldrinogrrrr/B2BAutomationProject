@@ -28,4 +28,7 @@ To run specific feature file/s in your local machine
 <li> Create the page object model class (page class) then inherit the stepdefinition class </li>
 </ol>
 
-#This repository is for B2B Testers. Maintained by Fritz Alabastro
+#This repository is for B2B Testers. 
+<ol> 
+Maintained by Fritz Alabastro
+</ol>
