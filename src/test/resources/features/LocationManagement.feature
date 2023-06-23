@@ -1,0 +1,2 @@
+#  @RunSolo
+Feature: Location Management

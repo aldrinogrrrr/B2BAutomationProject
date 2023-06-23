@@ -40,9 +40,15 @@ public class B2BPompage {
     @FindBy(xpath = "(//div[contains(.,'Deutsch')])[9]") public WebElement _LanguageSelectorDE;
     @FindBy(xpath = "(//div[contains(.,'English')])[10]") public WebElement _LanguageSelectorEN;
     //Footer
-    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[1]/b2b-ui-text") public WebElement _AGB;
-    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[2]/b2b-ui-text") public WebElement _Impressum;
-    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[3]/b2b-ui-text") public WebElement _Datenschutz;
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[1]/b2b-ui-text") public WebElement _TrmsandCndts;
+        @FindBy(xpath = "(//div[contains(.,'Terms & Conditions')])[6]") public WebElement _TrmsandCndtsEN;
+        @FindBy(xpath = "(//div[contains(.,'AGB')])[6]") public WebElement _TrmsandCndtsDE;
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[2]/b2b-ui-text") public WebElement _Cntct;
+        @FindBy(xpath = "(//div[contains(.,'Contact')])[6]") public WebElement _CntctEN;
+        @FindBy(xpath = "(//div[contains(.,'Impressum')])[6]") public WebElement _CntctDE;
+    @FindBy(xpath = "//*[@id=\"host-footer\"]/b2b-mfe-footer/app-footer/div/div/div/div/a[3]/b2b-ui-text") public WebElement _PrvcyPlcy;
+        @FindBy(xpath = "(//div[contains(.,'Privacy Policy')])[6]") public WebElement _PrvcyPlcyEN;
+        @FindBy(xpath = "(//div[contains(.,'Datenschutz')])[6]") public WebElement _PrvcyPlcyDE;
     //Dashboard
     @FindBy(xpath = "//*[@id=\"host-content\"]/b2b-mfe-dashboard/app-dashboard/div/div[1]/b2b-ui-text") public WebElement _MyApps;
     @FindBy(xpath = "(//div[contains(.,'Meine Apps')])[5]") public WebElement _MyAppsDE;
@@ -160,7 +166,7 @@ public class B2BPompage {
 
     //Dashboard
     public void userSeesTheDashboard() throws IOException {
-        h.xwaitForElementVisibility(_MyApps, driver, "isDisplayed", "user lands to the dashboard", _testLogs);
+        h.xwaitForElementVisibility(_MyApps.isDisplayed() ? _MyAppsEN : _MyAppsDE, driver, "isDisplayed", "user lands to the dashboard", _testLogs);
         h.pause(4);
     }
 
@@ -220,17 +226,17 @@ public class B2BPompage {
 
     //Footer
     public void userClicksTheAGB() throws IOException {
-        h.xwaitForElementVisibility(_AGB, driver, "click", "click AGB Link", _testLogs).click();
+        h.xwaitForElementVisibility(_TrmsandCndts.isDisplayed() ? _TrmsandCndtsEN : _TrmsandCndtsDE, driver, "click", "click AGB Link", _testLogs).click();
         h.pause(2);
     }
 
     public void userClicksTheImpressum() throws IOException {
-        h.xwaitForElementVisibility(_Impressum, driver, "click", "click Impressum Link", _testLogs).click();
+        h.xwaitForElementVisibility(_Cntct.isDisplayed() ? _CntctEN : _CntctDE, driver, "click", "click Impressum Link", _testLogs).click();
         h.pause(2);
     }
 
     public void userClicksTheDatenschutz() throws IOException {
-        h.xwaitForElementVisibility(_Datenschutz, driver, "click", "click Datenschutz Link", _testLogs).click();
+        h.xwaitForElementVisibility(_PrvcyPlcy.isDisplayed() ? _PrvcyPlcyEN : _PrvcyPlcyDE, driver, "click", "click Datenschutz Link", _testLogs).click();
         h.pause(2);
     }
 
