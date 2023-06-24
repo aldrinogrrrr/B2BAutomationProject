@@ -40,12 +40,12 @@ public class XPathLocators {
                         public static final String _CompanySelector = "//span[contains(@class,'dropdown-lbl')]";
                         public static final String _CompanySelectorSearch = "//input[contains(@autocomplete,'off')]";
                         public static final String _CompanyList = "//*[@id=\"mat-menu-panel-0\"]/div/app-dropdown-panel/div/div[2]/ul";
-                        public static final String _CompanyOnboardingENbtn = "(//div[contains(.,'Add new customer')])[8]";
-                        public static final String _CompanyOnboardingDEbtn = "(//div[contains(.,'Neuen Kunden hinzufügen')])[8]";
                         public static final String _CompanySearchResult = "(//div[contains(.,'CREM')])[13]";
+                        public static final String _OnboardingTextField = "//textarea[contains(@name,'company-name')]";
+                        public static final String _CompanyOnboardingDEbtn = "(//div[contains(.,'Neuen Kunden hinzufügen')])[8]";
+                        public static final String _CompanyOnboardingENbtn = "(//div[contains(.,'Add new customer')])[8]";
                         public static final String _OnboardingHeaderDE = "(//div[contains(.,'Neuen Kunden hinzufügen')])[4]";
                         public static final String _OnboardingHeaderEN = "(//div[contains(.,'Add new customer')])[4]";
-                        public static final String _OnboardingTextField = "//textarea[contains(@name,'company-name')]";
                         public static final String _CancelDEBtn = "//button[@type='secondary'][contains(.,'Abbrechen')]";
                         public static final String _CancelENBtn = "//button[@type='secondary'][contains(.,'Cancel')]";
                         public static final String _AddCompanyDEBtn = "//button[@class='default-btn'][contains(.,'Neuen Kunden hinzufügen')]";
@@ -69,28 +69,77 @@ public class XPathLocators {
                 public static final String _MyAppsEN = "(//div[contains(.,'My Apps')])[5]";
             }
             public static class myApps {
-
+                public static class AssetMonitor {
+                    public static final String _AssetMonitorDE = "(//div[contains(.,'AnlagenMonitor')])[7]";
+                    public static final String _AssetMonitorEN = "(//div[contains(.,'AssetMonitor')])[7]";
+                }
+                public static class EnergyManagement {
+                    public static class EMBasic {
+                        public static final String _EMBasicDE = "(//div[contains(.,'Energiemanagement')])[7]";
+                        public static final String _EMBasicEN = "(//div[contains(.,'Energy Management')])[7]";
+                    }
+                    public static class EMPremiumG {
+                        public static final String _EMPremiumGDE = "(//div[contains(.,'Energiemanagement (G)')])[7]";
+                        public static final String _EMPremiumGcEN = "(//div[contains(.,'Energy Management (G)')])[7]";
+                    }
+                    public static class EMPremiumO {
+                        public static final String _EMPremiumODE = "(//div[contains(.,'Energiemanagement (O)')])[7]";
+                        public static final String _EMPremiumOEN = "(//div[contains(.,'Energy Management (O)')])[7]";
+                    }
+                }
+                public static class EnergyMap {
+                    public static final String _EnergyMapDE = "(//div[contains(.,'Energiekarte')])[7]";
+                    public static final String _EnergyMapEN = "(//div[contains(.,'EnergyMap')])[7]";
+                }
+                public static class HeatNetMonitor {
+                    public static final String _HeatNetMonitorDE = "(//div[contains(.,'Wärmenetz Monitor')])[7]";
+                    public static final String _HeatNetMonitorEN = "(//div[contains(.,'Heat Net Monitor')])[7]";
+                }
+                public static class SmartIndoorMonitoring {
+                    public static final String _SmartIndoorMonitoringDE = "(//div[contains(.,'Smart Indoor Monitoring')])[7]";
+                    public static final String _SmartIndoorMonitoringEN = "(//div[contains(.,'Smart Indoor Monitoring')])[7]";
+                }
+                public static class Webshop {
+                    public static final String _WebshopDE = "(//div[contains(.,'Webshop')])[7]";
+                    public static final String _WebshopEN = "(//div[contains(.,'Webshop')])[7]";
+                }
+                public static class Xenon {
+                    public static final String _XenonDE = "(//div[contains(.,'Xenon')])[7]";
+                    public static final String _XenonEN = "(//div[contains(.,'Xenon')])[7]";
+                }
+                public static class Aski {
+                    public static final String _AskiDE = "";
+                    public static final String _AskiEN = "";
+                }
             }
-
         }
 
 
         // Add more XPath locators for elements on the Footer Section
         public static class Footer {
             public static class Terms {
-                public static final String _TrmsandCndtsEN = "(//div[contains(.,'Terms & Conditions')])[6]";
                 public static final String _TrmsandCndtsDE = "(//div[contains(.,'AGB')])[6]";
+                public static final String _TrmsandCndtsEN = "(//div[contains(.,'Terms & Conditions')])[6]";
             }
             public static class Contacts {
-                public static final String _CntctEN = "(//div[contains(.,'Contact')])[6]";
                 public static final String _CntctDE = "(//div[contains(.,'Impressum')])[6]";
+                public static final String _CntctEN = "(//div[contains(.,'Contact')])[6]";
             }
             public static class Privacy {
-                public static final String _PrvcyPlcyEN = "(//div[contains(.,'Privacy Policy')])[6]";
                 public static final String _PrvcyPlcyDE = "(//div[contains(.,'Datenschutz')])[6]";
+                public static final String _PrvcyPlcyEN = "(//div[contains(.,'Privacy Policy')])[6]";
             }
             public static class Version {
+                public static class BAG {
+                    public static final String _VersionDE = "(//div[contains(.,'© Bayernwerk Netz GmbH 2023')])[7]";
+                    public static final String _VersionEN = "(//div[contains(.,'© Bayernwerk Netz GmbH 2023')])[7]";
+                }
+                public static class HAW {
 
+                }
+                public static class LEW {
+
+                }
             }
         }
 

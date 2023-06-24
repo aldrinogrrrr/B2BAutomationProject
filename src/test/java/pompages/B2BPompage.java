@@ -37,7 +37,8 @@ public class B2BPompage {
         }
 
 
-        // Locators and methods for the Header section
+
+    // Locators and methods for the Header section
         public static class ProfileIcon {
                 public static void userClicksTheProfileIcon(WebDriver driver){
                     driver.findElement(By.xpath(XPathLocators.Header.ProfileIconSelection._ProfileIcon)).click();
@@ -119,6 +120,14 @@ public class B2BPompage {
         public void userSeesTheDashboard() {
             driver.findElement(By.xpath(XPathLocators.Dashboard.myappsTxtlbl._MyAppsDE + " | " + XPathLocators.Dashboard.myappsTxtlbl._MyAppsEN)).isDisplayed();
             h.pause(7);
+        }
+        public void userClicksTheXenonApp() {
+            driver.findElement(By.xpath(XPathLocators.Dashboard.myApps.Xenon._XenonDE + "|" + XPathLocators.Dashboard.myApps.Xenon._XenonEN)).click();
+            h.pause(4);
+        }
+        public void userClicksTheWebshopApp() {
+            driver.findElement(By.xpath(XPathLocators.Dashboard.myApps.Webshop._WebshopDE + "|" + XPathLocators.Dashboard.myApps.Webshop._WebshopEN)).click();
+            h.pause(8);
         }
 
 

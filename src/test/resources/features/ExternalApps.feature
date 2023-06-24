@@ -2,23 +2,26 @@
 Feature: Third-party applications
 
 
-#  @RunSolo
+  @RunSolo
   Scenario: Go to Xenon App
     Given user goes to B2B site
     And user logs in
     Then user sees the dashboard
+    Then user clicks the Xenon App
 
 #  @RunSolo
   Scenario: Go to Webshop App
     Given user goes to B2B site
     And user logs in
     Then user sees the dashboard
+    Then user clicks the Webshop App
 
 #  @RunSolo
   Scenario: Go to Aski App
     Given user goes to B2B site
     And user logs in
     Then user sees the dashboard
+#    Then user clicks the Aski App
 
 #  @RunSolo
   Scenario: Go to AGB Hyperlink
