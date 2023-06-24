@@ -2,7 +2,7 @@
 Feature: Language Selector
 
 
-  @RunSolo
+#  @RunSolo
   Scenario: Select English Language
     Given user goes to B2B site
     And user logs in
