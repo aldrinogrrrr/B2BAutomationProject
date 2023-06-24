@@ -2,7 +2,7 @@
 Feature: B2B User Setting
 
 
-#  @RunSolo
+  @RunSolo
   Scenario: Go to User Setting
     Given user goes to B2B site
     And user logs in

@@ -34,6 +34,7 @@ public class B2BstepDefinition extends Instance {
         }
 
 
+
     // Step Definitions for the Header Section
         public static class ProfileIcon {
                 @Then("user clicks the profile icon")
@@ -110,14 +111,7 @@ public class B2BstepDefinition extends Instance {
         public void userSeesTheDashboard() {
                 _page.userSeesTheDashboard();
         }
-        @Then("user clicks the Xenon App")
-        public void userClicksTheXenonApp() {
-                _page.userClicksTheXenonApp();
-        }
-        @Then("user clicks the Webshop App")
-        public void userClicksTheWebshopApp() {
-                _page.userClicksTheWebshopApp();
-        }
+
 
 
 
